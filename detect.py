@@ -22,7 +22,6 @@ while(True):
     faces_rects = haar_cascade_face.detectMultiScale(image_gray, scaleFactor = 1.2, minNeighbors = 5)
 
     print('Faces found: ', len(faces_rects))
-        # Display the resulting frame  
     
     for (x,y,w,h) in faces_rects:
         cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
