@@ -1,3 +1,4 @@
+from matplotlib import image
 import numpy as np
 import cv2 
 import matplotlib.pyplot as plt
@@ -9,11 +10,7 @@ if not cap.isOpened():
 
 while(True):  
          
-    ret, frame = cap.read()  
-    
-    image = frame
-         
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)  
+    ret, image = cap.read()  
       
     image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -26,7 +23,7 @@ while(True):
     for (x,y,w,h) in faces_rects:
         cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
-    cv2.imshow('frame',image)  
+    cv2.imshow('Face Detection',image)  
     
     if cv2.waitKey(1) & 0xFF == ord('c'):  
         break  

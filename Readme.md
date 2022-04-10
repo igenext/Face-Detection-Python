@@ -5,4 +5,4 @@
 2. Unzip and cd into your cloned directory.
 3. Run `pip install -r requirements.txt` or `pip3 install -r requirements.txt` .
 4. Run  `python detect.py` or `python3 detect.py` .
-5. To close the frame window press "`c`".
+5. To close the frame capture window press "`c`".
